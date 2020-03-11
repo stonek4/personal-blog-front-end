@@ -1,0 +1,6 @@
+<app-card *ngIf="title" class="blog-post-card">
+    <p id="about-me-error">{{ errorFeedback }}</p>
+    <span><h2>{{ title }}</h2></span>
+    <div class="blog-post-content" [innerHTML]="renderedContent"></div>
+</app-card>
+<app-loading-icon *ngIf="!title"></app-loading-icon>

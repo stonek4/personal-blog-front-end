@@ -1,0 +1,82 @@
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+#home-page {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#home-centered-container {
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+}
+
+#home-title {
+    text-shadow: 2px 2px 2px grey;
+    text-align: center;
+    width: 100%;
+    max-height: 200px;
+    margin-top: 0px;
+    margin-bottom: 40px;
+}
+
+#home-title-alt {
+    @extend #home-title;
+    padding-top: 25px;
+    display: none;
+}
+
+#home-button-container {
+    position: relative;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
+    padding: 10px;
+    z-index: 1;
+}
+
+app-business-card {
+    opacity: 0;
+    position: relative;
+    display: inline-block;
+    animation: fadein 2s 1s forwards;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    margin-bottom: 40px;
+}
+
+app-floating-button {
+    margin: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+    #home-title-alt {
+        display: block !important;
+    }
+    #home-title {
+        display: none;
+    }
+}
+
+@media only screen and (max-height: 650px) {
+    #home-title {
+        margin-bottom: 20px;
+    }
+    app-business-card {
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-height: 500px) {
+    app-business-card {
+        display: none;
+    }
+}

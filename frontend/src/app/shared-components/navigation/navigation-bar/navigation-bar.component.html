@@ -1,0 +1,4 @@
+<app-card id="navigation-bar" [class.is-sliding-in]="navigationService.displayNavigation" [class.is-sliding-out]="navigationService.displayNavigation === false">
+    <div (mousedown)="onBackClick()" class="navigation-bar-icon navigation-bar-first" aria-hidden="true" [attr.data-icon]="backOption.icon"></div>
+    <div *ngFor="let option of navigationOptions" (mousedown)="onClick(option)" [class.navigation-bar-selected]="option.isSelected" class="navigation-bar-icon" aria-hidden="true" [attr.data-icon]="option.icon"></div>
+</app-card>

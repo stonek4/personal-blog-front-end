@@ -1,0 +1,9 @@
+<app-card id="blog-login-card">
+    <form (ngSubmit)="login()">
+        <input [(ngModel)]="username" type="email" name="username" class="blog-login-input" autofocus>
+        <input [(ngModel)]="password" type="password" name="password" class="blog-login-input">
+        <p id="blog-login-error">{{ errorFeedback }}</p>
+        <app-floating-button id="blog-login-button" [buttonText]="'Login'"></app-floating-button>
+        <div id="blog-login-clear"></div>
+    </form>
+</app-card>

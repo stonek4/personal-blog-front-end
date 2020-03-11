@@ -1,0 +1,30 @@
+#blog-post-like-icon {
+    float: right;
+    font-size: 3rem;
+    color: #3a3c3f;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+
+#blog-post-like-icon:hover {
+    transition: color 0.4s ease;
+    color: lightgrey;
+}
+
+#blog-post-like-icon.blog-post-icon-disabled {
+    transition: color 1s ease;
+    color: rgb(153, 22, 22);
+    cursor: default;
+}
+
+#blog-post-like-count {
+    float: right;
+    width: 100px;
+    margin: 0px;
+    text-align: right;
+    margin-right: 5px;
+}
+
+#blog-post-clear {
+    clear: both;
+}

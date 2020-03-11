@@ -1,0 +1,43 @@
+.blog-posts {
+    width: 98%;
+    margin-top: 85px;
+    margin-bottom: 85px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1200px;
+    position: relative;
+}
+
+.blog-post {
+    display: block;
+    margin-top: 15px;
+    max-height: 215px;
+    cursor: pointer;
+    transition: all .2s;
+    width: 100%;
+}
+
+.blog-post-content, .blog-post-title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.blog-post-anchor {
+    height: 0px;
+    width: 0px;
+    font-size: 0px;
+}
+
+.blog-post-title {
+    margin-bottom: 0px;
+}
+
+.blog-post:hover {
+    background-color: lightgrey;
+    width: 98%;
+}
+
+.blog-post-content p {
+    margin-bottom: 0;
+}

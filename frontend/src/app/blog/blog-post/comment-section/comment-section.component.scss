@@ -1,0 +1,73 @@
+#comment-box-card, .comment {
+    display: block;
+    margin-bottom: 20px;
+    width: 96%;
+    max-width: 900px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#comment-box-card {
+    margin-bottom: 40px;
+}
+
+#comment-box-button {
+    float: right;
+}
+
+#comment-box-clear {
+    clear: both;
+}
+
+.comment-box-post-id {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+    z-index: -1;
+}
+
+.comment-box-label {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 100%;
+    display: block;
+}
+
+#comment-box-name {
+    width: 50%;
+    font-size: 1.6rem;
+    height: 3.2rem;
+}
+
+#comment-box-content {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+
+.comment-date {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: grey;
+    font-size: 1.2rem;
+}
+
+.comment-error {
+    color: red;
+    margin: 0;
+}
+
+.comment-title {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.comment-content {
+    margin-bottom: 5px;
+}

@@ -1,0 +1,13 @@
+<app-card *ngIf="title" class="blog-post-card">
+    <p class="blog-error">{{ errorFeedback }}</p>
+    <span>
+        <h2>{{ title }}</h2>
+        <p class="blog-post-date">{{ date }}</p>
+    </span>
+    <div class="blog-post-content" [innerHTML]="renderedContent"></div>
+    <div id="blog-post-like-icon" (mousedown)="likePost($event)" data-icon="&#xe0a7;"></div>
+    <p id="blog-post-like-count">{{ likeCount }}</p>
+    <div id="blog-post-clear"></div>
+</app-card>
+<app-loading-icon *ngIf="!title"></app-loading-icon>
+<app-comment-section *ngIf="title" [postId]="postId"></app-comment-section>

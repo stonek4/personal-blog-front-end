@@ -1,0 +1,30 @@
+.floating-button {
+    padding: 0;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3a3c3f;
+    background-color: white;
+    cursor: pointer;
+    transition: all .2s;
+    box-shadow: 2px 2px 2px grey;
+    padding: 10px;
+    font-size: 2rem;
+    min-width: 100px;
+    // height: 80px;
+}
+
+.floating-button:active {
+    box-shadow: None;
+    margin-top: 5px;
+    margin-bottom: -5px;
+    color: black;
+}
+
+.floating-button:hover {
+    background-color: lightgrey;
+}
+
+.floating-button::-moz-focus-inner {
+    border: 0;
+}
+

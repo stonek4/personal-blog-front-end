@@ -1,0 +1,58 @@
+@keyframes slidein {
+    from { transform: translateX(-100%) }
+    to   { transform: translateX(0%) }
+}
+
+@keyframes slideout {
+    from { transform: translateX(0%) }
+    to   { transform: translateX(-100%) }
+}
+
+#navigation-bar {
+    transform: translateX(-100%);
+    visibility: hidden;
+    z-index: 2;
+    position: fixed;
+}
+
+#navigation-bar.is-sliding-in {
+    animation: slidein 1s 0.2s forwards;
+    transform: translateX(-100%);
+    visibility: visible;
+}
+
+#navigation-bar.is-sliding-out {
+    animation: slideout 1s 0.2s forwards;
+    transform: translateX(0%);
+    visibility: visible;
+}
+
+.navigation-bar-icon {
+    float: left;
+    margin-left: 15px;
+    font-size: 3.5rem;
+    margin-top: -1.8rem;
+    position: relative;
+    color: #3a3c3f;
+    cursor: pointer;
+}
+
+.navigation-bar-first {
+    margin-left: 0px;
+}
+
+.navigation-bar-icon:hover {
+    transition: color 0.4s ease;
+    color: lightgrey;
+}
+
+@media (hover: none) {
+    .navigation-bar-icon:hover {
+        color: inherit;
+    }
+}
+
+.navigation-bar-selected {
+    transition: color 0.4s ease;
+    color: lightgrey !important;
+}

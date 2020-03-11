@@ -1,0 +1,27 @@
+<p class="comment-error">{{ errorFeedback }}</p>
+<app-card id="comment-box-card">
+    <form id="comment-box" (ngSubmit)="postComment()">
+        <!-- this is a trap for bots -->
+        <label for="email" class="comment-box-post-id">Email:</label>
+        <input [(ngModel)]="postId" class="comment-box-post-id" name="email">
+
+        <label class="comment-box-label" for="name">Name:</label>
+        <input [(ngModel)]="name" name="name" id="comment-box-name" class="comment-box-field">
+        <label class="comment-box-label" for="content">Comment:</label>
+        <textarea [(ngModel)]="content" name="content" id="comment-box-content" class="comment-box-field"></textarea>
+        <app-floating-button id="comment-box-button" [buttonText]="'Submit'"></app-floating-button>
+        <div id="comment-box-clear"></div>
+    </form>
+</app-card>
+<div id="comments">
+    <app-card *ngFor="let comment of comments" class="comment">
+        <span>
+            <a class="comment-anchor" [name]="comment.id"></a>
+            <h6 class="comment-title">{{ comment.name }}</h6>
+            <p class="comment-date">{{ comment.created }}</p>
+        </span>
+        <p class="comment-content">
+            {{ comment.content }}
+        </p>
+    </app-card>
+</div>

@@ -1,0 +1,19 @@
+#about-me-card {
+    width: 98%;
+    margin-top: 85px;
+    margin-bottom: 85px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1000px;
+    display: block;
+}
+
+#about-me-content p {
+    margin-bottom: 4rem;
+}
+
+#about-me-error {
+    margin: 0;
+    color: red;
+}

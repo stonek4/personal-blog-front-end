@@ -1,0 +1,133 @@
+/* You can add global styles to this file, and also import other style files */
+html {
+    font-size: 10px;
+}
+
+@font-face {
+    font-family: 'Major Mono Display';
+    src: url('./assets/fonts/SourceCodePro-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Metrize-Icons';
+	src:url('./assets/fonts/Metrize-Icons.ttf') format('truetype');
+	font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./assets/fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+body {
+    color: black;
+    background-image: url('./assets/img/seigaiha.png');
+    background-repeat: repeat;
+    margin: 0px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-height: 100%;
+    min-width: 100%;
+    // width: 100vw;
+    position: absolute;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'Metrize-Icons';
+	content: attr(data-icon);
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+router-outlet ~ * {
+    position: absolute;
+    height: auto;
+    width: 100%;
+    min-height: 100%;
+}
+
+h1 {
+    font-family: 'Major Mono Display', Arial, Helvetica, sans-serif;
+    color: #3a3c3f;
+    font-size: 5rem;
+}
+
+h2 {
+    @extend h1;
+    font-size: 3.5rem;
+}
+
+h3 {
+    font-size: 2.2rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+h5 {
+    font-size: 1.8rem;
+}
+
+h6 {
+    font-size: 1.7rem;
+}
+
+p, code, li, label {
+    font-size: 1.6rem;
+}
+
+p {
+    line-height: 2;
+    word-spacing: 0.2rem;
+}
+
+textarea {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+label {
+    margin-right: 5px;
+}
+
+code {
+    background-color: lightgrey;
+}
+
+input {
+    font-size: 2rem;
+    height: 4rem;
+    border-radius: 0%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgrey;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+@media screen and (max-width: 992px) {
+    html {
+        font-size: 9px;
+    }
+    h1 {
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+}

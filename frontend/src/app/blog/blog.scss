@@ -1,0 +1,27 @@
+.blog-post-date {
+    margin-top: 5px;
+    margin-bottom: 25px;
+    color: grey;
+    font-size: 1.2rem;
+}
+
+.blog-error {
+    color: red;
+    margin: 0;
+}
+
+.blog-post-card {
+    width: 98%;
+    margin-top: 85px;
+    margin-bottom: 85px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1000px;
+    display: block;
+}
+
+.blog-post-content p {
+    margin-bottom: 4rem;
+}
+

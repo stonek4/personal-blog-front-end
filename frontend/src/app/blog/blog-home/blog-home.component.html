@@ -1,0 +1,14 @@
+<p class="blog-error">{{ errorFeedback }}</p>
+<div class="blog-posts">
+    <app-card *ngFor="let blog of blogPosts" (click)="onClick(blog.id)" class="blog-post">
+        <span>
+            <a class="blog-post-anchor" [name]="blog.id"></a>
+            <h2 class="blog-post-title">{{ blog.title }}</h2>
+            <p class="blog-post-date">{{ blog.created }}</p>
+        </span>
+        <p class="blog-post-content">
+            {{ blog.content }}
+        </p>
+    </app-card>
+</div>
+<app-loading-icon *ngIf="!blogPosts"></app-loading-icon>

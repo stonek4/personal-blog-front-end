@@ -1,0 +1,10 @@
+<div id="home-page">
+    <div id="home-centered-container">
+        <h1 id="home-title">{{title}}</h1>
+        <h1 id="home-title-alt">{{altTitle}}</h1>
+        <app-business-card></app-business-card>
+        <div id="home-button-container">
+            <app-floating-button *ngFor="let option of navigationOptions" (clicked)="onClick(option)" [buttonIcon]="option.icon" [buttonText]="option.name"></app-floating-button>
+        </div>
+    </div>
+</div>

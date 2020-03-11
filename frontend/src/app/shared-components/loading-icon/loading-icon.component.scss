@@ -1,0 +1,49 @@
+$icon-size: 3.5rem;
+$inner-size: $icon-size / 2;
+$movement-distance: calc(100% - 1.75rem);
+$speed: 1.8s;
+
+.loading-icon-outer-square {
+    width: $icon-size;
+    height: $icon-size;
+    background-color: grey;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%, -50%);
+}
+
+.loading-icon-inner-square {
+    width: $inner-size;
+    height: $inner-size;
+    position: absolute;
+    bottom: auto;
+    right: auto;
+}
+
+.loading-icon-inner-square-one {
+    @extend .loading-icon-inner-square;
+    animation: rotate $speed linear infinite;
+    background-color: white;
+}
+
+.loading-icon-inner-square-two {
+    @extend .loading-icon-inner-square;
+    background-color: lightgrey;
+    animation: rotate-opposite $speed linear infinite;
+
+}
+
+@keyframes rotate {
+    0%, 85%, 100% { left: 0%; top: 0%; }
+    10%, 25% { left: $movement-distance; top: 0%; }
+    35%, 50% { left: $movement-distance; top: $movement-distance; }
+    60%, 75% { left: 0%; top: $movement-distance; }
+}
+
+@keyframes rotate-opposite {
+    0%, 85%, 100% { left: $movement-distance; top: $movement-distance; }
+    10%, 25% { left: 0%; top: $movement-distance; }
+    35%, 50% { left: 0%; top: 0%; }
+    60%, 75% { left: $movement-distance; top: 0%; }
+}

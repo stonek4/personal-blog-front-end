@@ -1,0 +1,34 @@
+<app-blog-login *ngIf="!httpClient.isLoggedIn()"></app-blog-login>
+<p class="blog-error">{{ errorFeedback }}</p>
+<form (ngSubmit)="load()">
+    <div class="blog-form-group">
+            <label class="blog-label" for='blog-id'>ID of Blog</label>
+            <input [(ngModel)]="blogId" name="blog-id" class="blog-input blog-admin-blog-id">
+            <app-floating-button id="blog-admin-load-button" [buttonText]="'Load'"></app-floating-button>
+    </div>
+</form>
+
+<form (ngSubmit)="upsert()">
+    <div class="blog-form-group">
+        <label class="blog-label" for='blog-title'>Title</label>
+        <input [(ngModel)]="title" name="blog-title" class="blog-input blog-admin-blog-title">
+    </div>
+    <div class="blog-form-group">
+        <label class="blog-label" id="blog-admin-content-label" for='blog-content'>Content</label>
+        <textarea [(ngModel)]="content" name="blog-content" class="blog-admin-blog-content"></textarea>
+    </div>
+    <app-card class="blog-admin-blog-preview">
+        <span>
+            <h2>{{ title }}</h2>
+            <p class="blog-post-date">{{ currentDate }}</p>
+        </span>
+        <div [innerHTML]="converter.makeHtml(content)"></div>
+    </app-card>
+    <div class="blog-admin-clear"></div>
+    <div class="blog-form-group">
+        <label class="blog-label" for='blog-tags'>Tags</label>
+        <input [(ngModel)]="tags" name="blog-tags" class="blog-input blog-admin-blog-tags">
+    </div>
+    <app-floating-button id="blog-admin-upsert-button" [buttonText]="'Add Post'"></app-floating-button>
+    <app-floating-button id="blog-admin-delete-button" (clicked)="delete()" [buttonType]="'button'" [buttonText]="'Delete Post'"></app-floating-button>
+</form>
