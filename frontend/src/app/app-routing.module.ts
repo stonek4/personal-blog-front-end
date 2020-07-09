@@ -6,7 +6,7 @@ import { FeaturedComponent } from './featured/featured.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
-    { path: 'blog', loadChildren: './blog/blog.module#BlogModule' },
+    { path: 'blog', loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) },
     { path: 'about', component: AboutMeComponent },
     { path: 'featured', component: FeaturedComponent },
     { path: '', redirectTo: '/home', pathMatch: 'full' }
