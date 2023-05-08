@@ -22,7 +22,7 @@
     "@angular/router": "^10.0.3",
     "@types/showdown": "^1.9.3",
     "core-js": "^3.6.5",
-    "firebase-tools": "^8.5.0",
+    "firebase-tools": "^11.30.0",
     "ngx-logger": "^4.1.9",
     "npm-check-updates": "^7.0.1",
     "remove-markdown": "^0.3.0",
