@@ -21,7 +21,6 @@
     "@angular/router": "^18.0.1",
     "@types/showdown": "^1.9.3",
     "core-js": "^3.6.5",
-    "firebase-tools": "^13.10.2",
     "ngx-logger": "^5.0.12",
     "npm-check-updates": "^16.14.20",
     "remove-markdown": "^0.5.0",
