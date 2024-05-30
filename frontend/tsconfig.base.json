@@ -10,7 +10,8 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "es5",
+    "useDefineForClassFields": false,
+    "target": "ES2022",
     "typeRoots": [
       "node_modules/@types"
     ],

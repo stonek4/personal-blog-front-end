@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { SharedComponentsModule } from './shared-components/shared-components.module';
@@ -14,30 +14,24 @@ import { AuthInterceptor, HttpErrorInterceptor } from './app-http-client.service
 import { FeaturedComponent } from './featured/featured.component';
 import { environment } from '../environments/environment';
 
-@NgModule({
-    declarations: [
+@NgModule({ declarations: [
         AppComponent,
         HomeComponent,
         BusinessCardComponent,
         AboutMeComponent,
         FeaturedComponent
     ],
-    imports: [
-        BrowserModule,
+    bootstrap: [AppComponent], imports: [BrowserModule,
         BrowserAnimationsModule,
         AppRoutingModule,
-        HttpClientModule,
         SharedComponentsModule,
         LoggerModule.forRoot({
             // serverLoggingUrl: '/api/logs',
             level: !environment.production ? NgxLoggerLevel.DEBUG : NgxLoggerLevel.OFF,
             serverLogLevel: NgxLoggerLevel.ERROR
-        })
-    ],
-    providers: [
+        })], providers: [
         { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
-    ],
-    bootstrap: [AppComponent]
-})
+        provideHttpClient(withInterceptorsFromDi()),
+    ] })
 export class AppModule { }

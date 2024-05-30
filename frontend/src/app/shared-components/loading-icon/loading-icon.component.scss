@@ -1,5 +1,5 @@
 $icon-size: 3.5rem;
-$inner-size: $icon-size / 2;
+$inner-size: calc($icon-size / 2);
 $movement-distance: calc(100% - 1.75rem);
 $speed: 1.8s;
 

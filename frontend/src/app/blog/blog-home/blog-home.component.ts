@@ -4,7 +4,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 /* Third Party */
 import { NGXLogger } from 'ngx-logger';
-import * as removeMd from 'remove-markdown';
+import removeMd from 'remove-markdown';
 /* Custom */
 import { NavigationService, NavigationOptions } from '../../shared-components/navigation/navigation.service';
 import { AppHttpClientService, BlogPost } from '../../app-http-client.service';
